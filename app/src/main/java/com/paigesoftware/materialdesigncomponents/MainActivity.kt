@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.paigesoftware.materialdesigncomponents.alertdialog.AlertDialogActivity
 import com.paigesoftware.materialdesigncomponents.bottomnavigationview.BottomNavigationViewActivity
 import com.paigesoftware.materialdesigncomponents.snackbar.SnackBarActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
         button_go_to_bottom_navigation_view.setOnClickListener(this)
         button_go_to_snackbar.setOnClickListener(this)
+        button_go_to_alertdialog.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -24,6 +26,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.button_go_to_snackbar -> {
                 startActivity(Intent(this, SnackBarActivity::class.java))
+            }
+            R.id.button_go_to_alertdialog -> {
+                startActivity(Intent(this, AlertDialogActivity::class.java))
             }
         }
     }

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialDesignComponents">
-        <activity android:name=".snackbar.SnackBarActivity"></activity>
+        <activity android:name=".alertdialog.AlertDialogActivity"></activity>
+        <activity android:name=".snackbar.SnackBarActivity" />
         <activity android:name=".bottomnavigationview.BottomNavigationViewActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
