@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".floatingbutton.FloatingButtonActivity">
+    
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Normal Floating Action Button -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/main_add_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="32dp"
+            android:src="@drawable/alert_dialog_bg"
+            android:visibility="visible"
+            app:fabSize="auto" />
+            <!-- fabSize, mini, normal, auto -->
+
+        <!-- Extended Floating Action Button -->
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:text="Data"
+            android:visibility="gone"
+            android:layout_margin="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/alert_dialog_bg"
+            app:fabSize="auto"
+            app:rippleColor="@color/purple_200"
+            app:icon="@drawable/ic_baseline_access_alarm_24"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:visibility="invisible"
+        android:id="@+id/fab_add_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/fab_add_user"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_accessibility_new_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:visibility="invisible"
+        android:id="@+id/fab_add_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/container_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_baseline_airplay_24" />
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/add_user_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:background="@drawable/fab_text_bg"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="Add User"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_add_user"
+        app:layout_constraintEnd_toStartOf="@+id/fab_add_user"
+        app:layout_constraintTop_toTopOf="@+id/fab_add_user" />
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/add_contact_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/fab_text_bg"
+        android:fontFamily="@font/raleway_semibold"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:text="Add New Contact"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_add_contact"
+        app:layout_constraintEnd_toStartOf="@+id/fab_add_contact"
+        app:layout_constraintTop_toTopOf="@+id/fab_add_contact" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
