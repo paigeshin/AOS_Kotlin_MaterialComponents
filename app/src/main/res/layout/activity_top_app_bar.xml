@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".topappbar.TopAppBarActivity">
+
+    <!-- Just for the test -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <!-- app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" 위치가 무조건 appbar 아래에 포지셔닝 되게 강제한다 -->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="512dp"
+            android:paddingBottom="512dp" />
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Theme을 다시 설정해주는 이유, text color를 바꾸기 위함이다. -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"
+        app:liftOnScroll="true"> <!-- lifeOnScroll => true, scroll 시에 shadow거 더 잘보이게 된다. -->
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:expandedTitleGravity="bottom"
+            app:contentScrim="?attr/colorPrimary"
+            app:scrimAnimationDuration="300"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <!-- expandedTitleGravity, 화면이 늘어날 때 타이틀이 어디에 있는가. -->
+            <!-- CollapsingToolbar에 `layout_scrollFlags`를 적용해줘야지 scroll하면서 타이틀이 늘어나게 된다. -->
+            <!-- contentScrim, Collapsing 할 때 색깔이 어떻게 바뀔 것인가  -->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.5"
+                android:src="@drawable/sexy2"/>
+            <!-- app:layout_collapseMode="parallax", collapse할 때 없어짐 -->
+            <!--     app:layout_collapseParallaxMultiplier="0.5" collapsing 할 때 이미지가 얼마나 같이 움직이는지 정해준다. -->
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/top_app_bar_main_tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+            <!-- app:layout_collapseMode="pin", collapse할 때 고정 -->
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

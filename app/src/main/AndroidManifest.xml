@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialDesignComponents">
-        <activity android:name=".datepicker.DatePickerActivity"></activity>
+        <activity android:name=".topappbar.TopAppBarActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".datepicker.DatePickerActivity" />
         <activity android:name=".bottomsheet.BottomSheetActivity" />
         <activity
             android:name=".bottomappbar.BottomAppBarActivity"
