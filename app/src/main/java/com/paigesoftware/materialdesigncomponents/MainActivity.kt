@@ -12,6 +12,7 @@ import com.paigesoftware.materialdesigncomponents.datepicker.DatePickerActivity
 import com.paigesoftware.materialdesigncomponents.floatingbutton.FloatingButtonActivity
 import com.paigesoftware.materialdesigncomponents.navigationdrawer.NavigationDrawerActivity
 import com.paigesoftware.materialdesigncomponents.snackbar.SnackBarActivity
+import com.paigesoftware.materialdesigncomponents.taplayout.TabLayoutActivity
 import com.paigesoftware.materialdesigncomponents.textfield.TextFieldActivity
 import com.paigesoftware.materialdesigncomponents.topappbar.TopAppBarActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -31,6 +32,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         button_go_to_top_app_bar.setOnClickListener(this)
         button_go_to_textfield.setOnClickListener(this)
         button_go_to_navigation_drawer.setOnClickListener(this)
+        button_go_to_tablayout.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -64,6 +66,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.button_go_to_navigation_drawer -> {
                 startActivity(Intent(this, NavigationDrawerActivity::class.java))
+            }
+            R.id.button_go_to_tablayout -> {
+                startActivity(Intent(this, TabLayoutActivity::class.java))
             }
         }
     }
