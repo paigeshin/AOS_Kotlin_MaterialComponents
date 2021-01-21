@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet_constraintlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="62dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- peekHeight => bottom sheet이 숨겨지더라도 62dp의 크기는 유지한다.  -->
+    
+    <LinearLayout
+        android:id="@+id/linearlayout_bottom_sheet_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/purple_200"
+        android:weightSum="5">
+
+        <TextView
+            android:textColor="@color/white"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Create New Account"
+            android:textSize="16sp"
+            android:layout_margin="20dp"/>
+
+        <ImageView
+            android:id="@+id/bottom_sheet_icon_image"
+            android:src="@drawable/ic_baseline_add_circle_24"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+        
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/bottom_sheet_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="48dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearlayout_bottom_sheet_header"
+        app:srcCompat="@drawable/sexy2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

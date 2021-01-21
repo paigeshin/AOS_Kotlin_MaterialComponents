@@ -9,3 +9,5 @@
 [Floating Button](https://www.notion.so/Floating-Button-1907a9b3e8be4d6a9440bcf7657ac25a)
 
 [Bottom App Bar](https://www.notion.so/Bottom-App-Bar-185df082017f4adda79535ff1aec2cdf)
+
+[Bottom Sheet](https://www.notion.so/Bottom-Sheet-9b3727130aaf4e20a5de250d640c6f9c)

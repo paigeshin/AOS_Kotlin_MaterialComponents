@@ -7,6 +7,7 @@ import android.view.View
 import com.paigesoftware.materialdesigncomponents.alertdialog.AlertDialogActivity
 import com.paigesoftware.materialdesigncomponents.bottomappbar.BottomAppBarActivity
 import com.paigesoftware.materialdesigncomponents.bottomnavigationview.BottomNavigationViewActivity
+import com.paigesoftware.materialdesigncomponents.bottomsheet.BottomSheetActivity
 import com.paigesoftware.materialdesigncomponents.floatingbutton.FloatingButtonActivity
 import com.paigesoftware.materialdesigncomponents.snackbar.SnackBarActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         button_go_to_alertdialog.setOnClickListener(this)
         button_go_to_floatingbutton.setOnClickListener(this)
         button_go_to_bottom_appbar.setOnClickListener(this)
+        button_go_to_bottom_sheet.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -39,6 +41,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.button_go_to_bottom_appbar -> {
                 startActivity(Intent(this, BottomAppBarActivity::class.java))
+            }
+            R.id.button_go_to_bottom_sheet -> {
+                startActivity(Intent(this, BottomSheetActivity::class.java))
             }
         }
     }
