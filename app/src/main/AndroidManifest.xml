@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialDesignComponents">
-        <activity android:name=".floatingbutton.FloatingButtonActivity"></activity>
+        <activity android:name=".bottomappbar.BottomAppBarActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity android:name=".floatingbutton.FloatingButtonActivity" />
         <activity android:name=".alertdialog.AlertDialogActivity" />
         <activity android:name=".snackbar.SnackBarActivity" />
         <activity android:name=".bottomnavigationview.BottomNavigationViewActivity" />
