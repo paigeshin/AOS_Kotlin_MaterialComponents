@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialDesignComponents">
-        <activity android:name=".topappbar.TopAppBarActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
+        <activity
+            android:name=".navigationdrawer.NavigationDrawerActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+        <activity android:name=".textfield.TextFieldActivity" />
+        <activity
+            android:name=".topappbar.TopAppBarActivity"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
         <activity android:name=".datepicker.DatePickerActivity" />
         <activity android:name=".bottomsheet.BottomSheetActivity" />
         <activity
